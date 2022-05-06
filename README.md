@@ -1,1 +1,1 @@
-# Java_App_Using_Jenkins_And_Docker
+# Simple_Java_App_Using_Docker_And_Jenkins
