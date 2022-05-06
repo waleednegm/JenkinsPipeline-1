@@ -21,7 +21,7 @@ pipeline {
             echo "Push Docker Image ...."
             withCredentials([usernamePassword(credentialsId : 'dockerhub' , usernameVariable: 'USER' , passwordVariable: 'PWD')]){
               sh "echo ${PWD} || docker login -u ${USER} -password-std-in"
-              sh 'sudo docker push walednegm/hello_world_java:1.0'
+              sh 'docker push walednegm/hello_world_java:1.0'
             }
           }      
     }
