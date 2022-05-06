@@ -10,14 +10,11 @@ pipeline {
             sh 'cd ./hello_world || mvn package'
           }      
     }
-    stage("build_DockerImage"){
+    stage("Build_And_Push_To_DockerHub"){
           steps{
             echo "Build Docker Image ...."
             sh 'docker build -t walednegm/hello_world_java:1.0 .'
-          }      
-    }
-    stage("Push_To_DockerHub"){
-          steps{
+            
             echo "Push Docker Image ...."
             withCredentials([usernamePassword(credentialsId : 'dockerhub' , passwordVariable: 'password', usernameVariable: 'username')]){
               sh "echo ${password} | docker login -u ${username} --password-stdin"
