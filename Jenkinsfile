@@ -12,6 +12,7 @@ pipeline {
     }
     stage("Build Docker Image And Push To DockerHub"){
           steps{
+            sh 'sudo -i'
             echo "Build Docker Image ...."
             sh 'docker build -t walednegm/hello_world_java:1.0 .'
             
