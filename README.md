@@ -8,6 +8,12 @@
 ![alt text](https://raw.githubusercontent.com/waleednegm/Jenkins_Pipeline_Build_And_Push_To_DockerHub/main/assets/3.png)
 ![alt text](https://raw.githubusercontent.com/waleednegm/Jenkins_Pipeline_Build_And_Push_To_DockerHub/main/assets/4.png)
 ![alt text](https://raw.githubusercontent.com/waleednegm/Jenkins_Pipeline_Build_And_Push_To_DockerHub/main/assets/5.png)
+```
+docker run -p 8080:8080 -p 50000:50000 -d \
+-v jenkine_home_v2:/var/jenkins_home \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v $(which docker):/usr/bin/docker jenkins/jenkins:lts
+```
 
 ## Open The required Ports to access it with web browser
 ![alt text](https://raw.githubusercontent.com/waleednegm/Jenkins_Pipeline_Build_And_Push_To_DockerHub/main/assets/6.png)
