@@ -4,13 +4,13 @@ pipeline {
         maven 'Maven'
     }
   stages{
-    stage("build_jar"){
+    stage("Build Jar"){
           steps{
             echo "Build Jar file ...."
             sh 'cd ./hello_world || mvn package'
           }      
     }
-    stage("Build_And_Push_To_DockerHub"){
+    stage("Build Docker Image And Push To DockerHub"){
           steps{
             echo "Build Docker Image ...."
             sh 'docker build -t walednegm/hello_world_java:1.0 .'
