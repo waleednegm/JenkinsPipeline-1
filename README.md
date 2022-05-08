@@ -7,6 +7,14 @@
 ![alt text](https://raw.githubusercontent.com/waleednegm/Jenkins_Pipeline_Build_And_Push_To_DockerHub/main/assets/2.png)
 ![alt text](https://raw.githubusercontent.com/waleednegm/Jenkins_Pipeline_Build_And_Push_To_DockerHub/main/assets/3.png)
 ![alt text](https://raw.githubusercontent.com/waleednegm/Jenkins_Pipeline_Build_And_Push_To_DockerHub/main/assets/4.png)
+
+```
+sudo yum update
+sudo yum install docker
+sudo service docker start
+sudo usermod -aG docker $USER
+```
+
 ![alt text](https://raw.githubusercontent.com/waleednegm/Jenkins_Pipeline_Build_And_Push_To_DockerHub/main/assets/5.png)
 ```
 docker run -p 8080:8080 -p 50000:50000 -d \
